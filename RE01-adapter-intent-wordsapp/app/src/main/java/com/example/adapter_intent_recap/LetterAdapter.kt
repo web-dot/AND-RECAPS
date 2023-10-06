@@ -25,7 +25,8 @@ class LetterAdapter : RecyclerView.Adapter<LetterAdapter.LetterViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: LetterViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val item = list.get(position)
+        holder.button.text = item.toString()
     }
 
     override fun getItemCount() = list.size
