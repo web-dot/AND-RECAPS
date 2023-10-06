@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/admin/AndroidStudioProjects/AndroidRecaps/RE01-adapter-intent-wordsapp/app/src/main/res/layout/activity_detail.xml" value="0.1" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/AndroidRecaps/RE01-adapter-intent-wordsapp/app/src/main/res/layout/activity_detail_new.xml" value="0.1" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AndroidRecaps/RE01-adapter-intent-wordsapp/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AndroidRecaps/RE01-adapter-intent-wordsapp/app/src/main/res/layout/item_view.xml" value="0.6200657894736842" />
       </map>
