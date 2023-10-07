@@ -1,5 +1,6 @@
 package com.example.adapter_intent_recap
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +14,6 @@ class LetterAdapter : RecyclerView.Adapter<LetterAdapter.LetterViewHolder>() {
 
     class LetterViewHolder(val view: View) : RecyclerView.ViewHolder(view){
         val button: Button = view.findViewById(R.id.button_item)
-
     }
 
     // this method is called by LayoutManager to create new view holders for RecyclerView
@@ -27,6 +27,12 @@ class LetterAdapter : RecyclerView.Adapter<LetterAdapter.LetterViewHolder>() {
     override fun onBindViewHolder(holder: LetterViewHolder, position: Int) {
         val item = list.get(position)
         holder.button.text = item.toString()
+        holder.button.setOnClickListener{
+            val context = holder.itemView.context
+            val intent = Intent(context, DetailActivity::class.java)
+            intent.putExtra("letter", holder.button.text.toString())
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount() = list.size
