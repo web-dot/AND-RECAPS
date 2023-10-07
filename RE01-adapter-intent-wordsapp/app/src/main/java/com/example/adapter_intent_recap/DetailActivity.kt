@@ -7,6 +7,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.adapter_intent_recap.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
+    // a companion object is accessible across multiple classes
+    companion object{
+        const val LETTER = "letter"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         /**
@@ -19,7 +23,7 @@ class DetailActivity : AppCompatActivity() {
 
         // `intent` is not a property of DetailActivity, it is a property of any activity
         // It keeps a reference to the intent used to launch the activity
-        val letterId = intent?.extras?.getString("letter").toString()
+        val letterId = intent?.extras?.getString(LETTER).toString()
 
         val recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(this)
