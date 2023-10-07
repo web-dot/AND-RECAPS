@@ -17,7 +17,9 @@ class DetailActivity : AppCompatActivity() {
         val binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val letterId = "A"
+        // `intent` is not a property of DetailActivity, it is a property of any activity
+        // It keeps a reference to the intent used to launch the activity
+        val letterId = intent?.extras?.getString("letter").toString()
 
         val recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(this)
