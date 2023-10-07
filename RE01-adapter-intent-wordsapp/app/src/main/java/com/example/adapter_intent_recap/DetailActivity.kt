@@ -10,6 +10,7 @@ class DetailActivity : AppCompatActivity() {
     // a companion object is accessible across multiple classes
     companion object{
         const val LETTER = "letter"
+        const val SEARCH_PREFIX = "https://www.google.com/search?q="
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

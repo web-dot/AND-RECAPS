@@ -1,6 +1,8 @@
 package com.example.adapter_intent_recap
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,6 +36,13 @@ class WordAdapter(private val letterId: String, context: Context) :
     override fun onBindViewHolder(holder: WordViewHolder, position: Int) {
         val item = filteredWords.get(position)
         holder.button.text = item.toString()
+        holder.button.setOnClickListener{
+            val queryUrl: Uri = Uri.parse("${DetailActivity.SEARCH_PREFIX}")
+            // ACTION_VIEW is a generic intent, that takes a URL, the system then knows to process this URL
+            val intent = Intent(Intent.ACTION_VIEW, queryUrl)
+            val context = holder.view.context
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount() = filteredWords.size
